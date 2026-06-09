@@ -59,6 +59,419 @@
             animation: fadeIn 0.8s 0.4s var(--ease-in-out) forwards;
         }
 
+        nav {
+            background-color: #2d3748;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 1.1rem 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: all var(--transition-speed) var(--ease-in-out);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all var(--transition-speed);
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: sectionLoadIn 0.8s var(--ease-in-out) forwards;
+        }
+
+        #accueil { animation-delay: 0.1s; }
+        #parcours { animation-delay: 0.2s; }
+        #certifications { animation-delay: 0.3s; }
+        #competences { animation-delay: 0.4s; }
+        #contact { animation-delay: 0.5s; }
+
+        @keyframes sectionLoadIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.7rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .profile-container {
+            display: block;
+        }
+
+        .profile-img {
+            display: block;
+            width: 220px;
+            height: auto;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform var(--transition-speed) var(--ease-in-out), box-shadow var(--transition-speed);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .cycle {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 2rem;
+            position: relative;
+            transition: transform var(--transition-speed);
+        }
+
+        .cycle:hover {
+            transform: translateX(5px);
+        }
+
+        .cycle-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Grille adaptative pour les cartes */
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .education-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-color: var(--accent-color);
+        }
+
+        .education-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .education-card p {
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .skills-list {
+            padding-left: 1.5rem;
+        }
+
+        .skills-list li {
+            margin-bottom: 0.7rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 550px;
+            margin: 1rem auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: border-color var(--transition-speed);
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form button:hover {
+            background-color: #287e7c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: #2d3748;
+            color: white;
+            margin-top: 5rem;
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (min-width: 768px) {
+            .profile-container {
+                display: table;
+                width: 100%;
+            }
+            .profile-img-cell {
+                display: table-cell;
+                width: 240px;
+                vertical-align: top;
+                padding-right: 2.5rem;
+            }
+            .profile-text-cell {
+                display: table-cell;
+                vertical-align: top;
+            }
+            .profile-img {
+                margin: 0;
+                width: 100%;
+            }
+            .education-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            nav li { display: block; text-align: center; }
+            nav a { padding: 0.9rem; }
+            .container { margin: 2rem auto; }
+            .section { padding: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michel Sébastien Alonso</h1>
+        <p>Adaptabilité • Management • Vision Digitale</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#certifications">Certifications & Distinctions</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- SECTION ACCUEIL -->
+        <section id="accueil" class="section">
+            <h2>À propos</h2>
+            <div class="profile-container">
+                <div class="profile-img-cell">
+                    <img class="profile-img" src="profile.png" alt="Portrait Michel Sébastien Alonso">
+                </div>
+                <div class="profile-text-cell">
+                    <p><strong>Père de trois enfants</strong> et <strong>caméléon stratégique</strong> doté d'une forte agilité opérationnelle, mon parcours s'articule autour de la gestion de l'incertitude et de la transformation. Du commerce de terrain à la direction d'écosystèmes numériques, je structure les données et les organisations pour bâtir des stratégies durables et <em>future-proof</em>.</p>
+                    <p>Mon crédo repose sur la capacité à faire le lien entre l'expérience terrain et les infrastructures digitales complexes, tout en garantissant une rigueur absolue face aux évolutions réglementaires et aux enjeux de protection des données.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PARCOURS -->
+        <section id="parcours" class="section">
+            <h2>Mon Parcours</h2>
+            <div class="timeline">
+                
+                <div class="cycle">
+                    <div class="cycle-title">⚓ Cycle 1 : La Forge du Caractère</div>
+                    <p>Développement de la résilience, de la rigueur et de l'éthique de travail à travers mes premières expériences de terrain.</p>
+                </div>
+
+                <div class="cycle">
+                    <div class="cycle-title">🏗 Cycle 2 : L'Expertise Terrain & Le Management</div>
+                    <p>Gestion opérationnelle de commerces de proximité et immersion dans le secteur bancaire. Consolidation des compétences managériales, de la rigueur financière et du pilotage de la conformité réglementaire.</p>
+                </div>
+
+                <div class="cycle">
+                    <div class="cycle-title">🚀 Cycle 3 : L'Entrepreneuriat & La Vision Digitale</div>
+                    <p>Présidence d'une SAS technologique. Spécialisation dans la transition numérique, l'intégration de solutions SaaS, l'automatisation des processus métiers et la structuration des données financières.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION CERTIFICATIONS & DISTINCTIONS -->
+        <section id="certifications" class="section">
+            <h2>Certifications, Formations & Distinctions</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>École des Leaders</h3>
+                    <p><strong>Paris Dauphine</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #718096;">Développement du leadership stratégique, du management avancé et du pilotage de la performance des organisations.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Médaille de la Défense Nationale</h3>
+                    <p><strong>Distinction Militaire</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #718096;">Témoignage de l'engagement, de la rigueur opérationnelle et des services particulièrement honorables rendus.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Certification DPO</h3>
+                    <p><strong>Data Protection Officer</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #718096;">Expertise en conformité RGPD, gouvernance des données personnelles et gestion des risques numériques.</p>
+                </div>
+                <div class="education-card">
+                    <h3>Habilitation IAS 1</h3>
+                    <p><strong>Intermédiaire en Assurance</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #718096;">Niveau de qualification le plus élevé permettant la gestion et le conseil de solutions réglementées complexes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION COMPÉTENCES -->
+        <section id="competences" class="section">
+            <h2>Compétences & Mobilité</h2>
+            <h3>Savoir-faire clés</h3>
+            <ul class="skills-list">
+                <li><strong>Management & Stratégie :</strong> Pilotage de structures, leadership (Dauphine), valeurs d'engagement (Défense Nationale).</li>
+                <li><strong>Gouvernance & RGPD :</strong> Protection et intégrité des données (DPO) et mise en conformité des processus.</li>
+                <li><strong>Digital, Assurances & Banque :</strong> Expertise IAS 1, intégration SaaS, automatisation et réglementation (Recommandation 2024-R-03).</li>
+            </ul>
+
+            <h3>Zones de déploiement</h3>
+            <p>Interventions régulières et mobilité sur plusieurs axes européens : France, Espagne, Italie, Suisse, Allemagne.</p>
+        </section>
+
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Un projet ou une opportunité ? Échangeons ensemble.</p>
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Michel Sébastien Alonso. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>            padding: 4rem 1rem;
+            text-align: center;
+            animation: gradientWave 6s ease infinite;
+        }
+
+        @keyframes gradientWave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+            animation: slideInDown 0.6s var(--ease-in-out);
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.3rem;
+            opacity: 0;
+            animation: fadeIn 0.8s 0.4s var(--ease-in-out) forwards;
+        }
+
         /* CONFIGURATION DU NAVIGATION SYSTEM CORRIGÉE */
         nav {
             background-color: #2d3748;
