@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michel Sébastien Alonso | Site Personnel</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #319795;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2d3748;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cycle {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .cycle-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #287e7c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #2d3748;
+            color: white;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michel Sébastien Alonso</h1>
+        <p>Adaptabilité • Management • Vision Digitale</p>
+    </header>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#parcours">Parcours (Cycles)</a>
+        <a href="#competences">Compétences & Zones</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="accueil" class="section">
+            <h2>À propos</h2>
+            <p><strong>Caméléon stratégique</strong> doté d'une forte agilité opérationnelle, mon parcours s'articule autour de la gestion de l'incertitude et de la transformation. Du commerce de terrain à la direction d'écosystèmes numériques, je structure les données et les organisations pour bâtir des stratégies durables et <em>future-proof</em>.</p>
+        </section>
+
+        <section id="parcours" class="section">
+            <h2>Mon Parcours</h2>
+            <div class="timeline">
+                
+                <div class="cycle">
+                    <div class="cycle-title">⚓ Cycle 1 : La Forge du Caractère</div>
+                    <p>Développement de la résilience, de la rigueur et de l'éthique de travail à travers mes premières expériences de terrain.</p>
+                </div>
+
+                <div class="cycle">
+                    <div class="cycle-title">🏗 Cycle 2 : L'Expertise Terrain & Le Management</div>
+                    <p>Gestion opérationnelle de commerces de proximité et immersion dans le secteur bancaire. Consolidation des compétences managériales, de la rigueur financière et du pilotage de la conformité réglementaire.</p>
+                </div>
+
+                <div class="cycle">
+                    <div class="cycle-title">🚀 Cycle 3 : L'Entrepreneuriat & La Vision Digitale</div>
+                    <p>Présidence d'une SAS technologique. Spécialisation dans la transition numérique, l'intégration de solutions SaaS, l'automatisation des processus métiers et la structuration des données financières.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="competences" class="section">
+            <h2>Compétences & Mobilité</h2>
+            <h3>Savoir-faire clés</h3>
+            <ul>
+                <li><strong>Management & Stratégie :</strong> Pilotage de structures, gestion d'équipes et conduite du changement.</li>
+                <li><strong>Digital & Données :</strong> Structuration de bases de données, écosystèmes SaaS et automatisation (Recommandation 2024-R-03).</li>
+                <li><strong>Gestion financière :</strong> Analyse des risques et optimisation de modèles économiques.</li>
+            </ul>
+
+            <h3>Zones de déploiement</h3>
+            <p>Interventions régulières et mobilité sur plusieurs axes européens :</p>
+            <ul>
+                <li><strong>France :</strong> Ain, Alpes-Maritimes, Hautes-Alpes, Ariège, Aude...</li>
+                <li><strong>Espagne :</strong> Catalogne (Barcelone, Gérone, Lérida, Tarragone).</li>
+                <li><strong>Italie & Suisse :</strong> Turin, Gênes, Genève, Lausanne.</li>
+                <li><strong>Allemagne :</strong> Stuttgart, Sarrebruck, Mayence.</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p style="text-align: center;">Un projet de transition digitale ou une opportunité de collaboration ? Échangeons ensemble.</p>
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Michel Sébastien Alonso. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
