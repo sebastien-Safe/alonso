@@ -59,7 +59,7 @@
             animation: fadeIn 0.8s 0.4s var(--ease-in-out) forwards;
         }
 
-        /* BARRE DE NAVIGATION CORRIGÉE ET SÉCURISÉE */
+        /* CONFIGURATION DU NAVIGATION SYSTEM CORRIGÉE */
         nav {
             background-color: #2d3748;
             position: sticky;
@@ -67,18 +67,18 @@
             z-index: 100;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             width: 100%;
+            text-align: center; /* Centre le menu horizontalement */
         }
 
         nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; /* Empêche la disparition des éléments sur petit écran */
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block; /* Évite les bugs de rétrécissement Flexbox */
         }
 
         nav li {
+            display: inline-block; /* Aligne les éléments horizontalement avec stabilité */
             margin: 0;
             padding: 0;
         }
@@ -198,11 +198,11 @@
             margin-bottom: 0.5rem;
         }
 
-        .skills-list, .geo-list {
+        .skills-list {
             padding-left: 1.5rem;
         }
 
-        .skills-list li, .geo-list li {
+        .skills-list li {
             margin-bottom: 0.7rem;
         }
 
@@ -266,7 +266,7 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Responsive Design */
+        /* Mode Responsive Tablettes et PC */
         @media (min-width: 768px) {
             .profile-container {
                 display: table;
@@ -288,10 +288,11 @@
             }
         }
 
+        /* Mode Mobile */
         @media (max-width: 767px) {
             header h1 { font-size: 2.2rem; }
             header p { font-size: 1.1rem; }
-            nav ul { flex-direction: column; text-align: center; }
+            nav li { display: block; text-align: center; }
             nav a { padding: 0.9rem; }
             .container { margin: 2rem auto; }
             .section { padding: 1.8rem; }
@@ -305,7 +306,6 @@
         <p>Adaptabilité • Management • Vision Digitale</p>
     </header>
 
-    <!-- NAVIGATION CORRIGÉE -->
     <nav>
         <ul>
             <li><a href="#accueil">Accueil</a></li>
